@@ -6,6 +6,9 @@ public class MainTest {
 	private static final String URL = "http://yourapp.com/";
 	private final static Logger LOGGER = Logger.getLogger(MainTest.class);
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		JSONObject jsonObjSend = new JSONObject();
 
