@@ -32,6 +32,11 @@ import org.json.JSONObject;
 public class HttpClient {
 	private final static Logger LOGGER = Logger.getLogger(HttpClient.class);
 
+	/**
+	 * @param URL
+	 * @param jsonObjSend
+	 * @return
+	 */
 	public static JSONObject SendHttpPost(String URL, JSONObject jsonObjSend) {
 
 		try {
@@ -78,6 +83,10 @@ public class HttpClient {
 	}
 
 
+	/**
+	 * @param is
+	 * @return
+	 */
 	private static String convertStreamToString(InputStream is) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 		StringBuilder sb = new StringBuilder();
