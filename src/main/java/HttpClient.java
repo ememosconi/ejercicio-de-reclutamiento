@@ -20,12 +20,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.zip.GZIPInputStream;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
@@ -38,7 +37,7 @@ public class HttpClient {
 	 * @param jsonObjSend
 	 * @return
 	 */
-	public static JSONObject SendHttpPost(String URL, JSONObject jsonObjSend) {
+	public static JSONObject SendHttp(String URL, JSONObject jsonObjSend) {
 
 		try {
 			DefaultHttpClient httpclient = new DefaultHttpClient();
@@ -63,7 +62,6 @@ public class HttpClient {
 
 				String resultString = convertStreamToString(instream);
 				instream.close();
-				resultString = resultString.substring(1,resultString.length()-1); // remove wrapping "[" and "]"
 
 				JSONObject jsonObjRecv = new JSONObject(resultString);
 				LOGGER.info("<JSONObject>\n"+jsonObjRecv.toString()+"\n</JSONObject>");

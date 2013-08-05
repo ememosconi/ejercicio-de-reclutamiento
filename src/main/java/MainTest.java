@@ -3,7 +3,7 @@ import org.apache.log4j.Logger;
 import org.json.JSONObject;
 
 public class MainTest {
-	private static final String URL = "http://adobe.github.io/Spry/data/json/array-02.js";
+	private static final String URL = "http://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires";
 	private final static Logger LOGGER = Logger.getLogger(MainTest.class);
 
 	/**
@@ -24,7 +24,7 @@ public class MainTest {
 			e.printStackTrace();
 		}
 
-		JSONObject jsonObjRecv = HttpClient.SendHttpPost(URL, jsonObjSend);
+		JSONObject jsonObjRecv = HttpClient.SendHttp(URL, jsonObjSend);
 
 		System.out.println(jsonObjRecv);
 
