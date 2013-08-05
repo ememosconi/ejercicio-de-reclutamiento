@@ -3,7 +3,7 @@ import org.apache.log4j.Logger;
 import org.json.JSONObject;
 
 public class MainTest {
-	private static final String URL = "http://yourapp.com/";
+	private static final String URL = "http://adobe.github.io/Spry/data/json/array-02.js";
 	private final static Logger LOGGER = Logger.getLogger(MainTest.class);
 
 	/**

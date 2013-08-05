@@ -23,6 +23,7 @@ import java.util.zip.GZIPInputStream;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -41,12 +42,12 @@ public class HttpClient {
 
 		try {
 			DefaultHttpClient httpclient = new DefaultHttpClient();
-			HttpPost httpPostRequest = new HttpPost(URL);
+			HttpGet httpPostRequest = new HttpGet(URL);
 
 			StringEntity se;
 			se = new StringEntity(jsonObjSend.toString());
 
-			httpPostRequest.setEntity(se);
+			//httpPostRequest.setEntity(se);
 			httpPostRequest.setHeader("Accept", "application/json");
 			httpPostRequest.setHeader("Content-type", "application/json");
 			httpPostRequest.setHeader("Accept-Encoding", "gzip"); // only set this parameter if you would like to use gzip compression
