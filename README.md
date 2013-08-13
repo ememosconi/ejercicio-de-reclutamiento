@@ -5,7 +5,5 @@
   
 **Entregable**
  * Archivo formato zip (no se aceptan Forks o repositorios publicos)
- * Contenido completo de los fuentes de este repositorio
- * Directorio /test que contenga el/los test(s) JUnit
- * Refactor(s) del codigo en su respectivo directorio /src
+ * Contenido completo de los fuentes de este repositorio + Test(s) JUnit
  * Archivo /RESPUESTAS.md con las criticas / sugerencias sobre el codigo
